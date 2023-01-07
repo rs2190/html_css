@@ -1,0 +1,20 @@
+/*p {*/
+/*  color: red;*/
+/*}*/
+
+#word-red {
+  color: red;
+
+}
+
+#word-blue {
+  color: blue;
+}
+
+.red-word {
+  color: red;
+}
+
+.blue-word {
+  color: blue;
+}

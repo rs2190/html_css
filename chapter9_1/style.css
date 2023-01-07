@@ -1,0 +1,20 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+
+/*
+   リセットCSS
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 要素の横幅や高さが意図したとおりに指定*/
+  box-sizing: border-box;
+}
+
+.position {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+}
+.fa-brands {
+  font-size: 32px;
+}

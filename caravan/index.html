@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initialscale.1.0"/>
+   <!-- FontAwesomeの読み込み -->
+  <script src="https://kit.fontawesome.com/0de2754f94.js" crossorigin="anonymous"></script>
+  <!--CSSファイルの読み込み-->
+  <link rel="stylesheet" href="style.css" />
+  <title>CARAVAN</title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <h1 class="heading">
+      <a href="index.html">
+        CARAVAN
+      </a>
+    </h1>
+    <div class="social">
+    <i class="fab fa-facebook-square"> </i>
+    <i class="fab fa-twitter-square"></i>
+    <i class="fab fa-instagram"></i>
+    </div>
+  </header>
+  <!-- navigation -->
+  <!--nav要素は、ナビゲーションメニューを設定するときに用います。header要素やfooter要素などと同様に、領域を作成するための要素です。-->
+  <!--ナビゲーションメニューは「Webサイトの目次」のことで、クリックすると各ページへ移動します---->
+  <nav>
+    <!--ul要素はUnordered Listの略で、順序のないリスト（箇条書きリスト） を表示する要素です。リストの各項目はli要素で記述します。-->
+    <ul class="nav-list">
+      <!--li要素はList Itemの略で、リストの内容を指定する要素です。-->
+      <!--リスト行頭の表示スタイルは、ul要素またはol要素のどちらで記述されているかによって決まります。-->
+      <!--ul要素の場合、・ がリストの先頭に付きます。-->
+      <!--ol要素の場合、(Ordered List)1から始まる番号が付きます。-->
+      <li class="nav-list-item">
+        <a href="index.html">home</a>
+      </li>
+      <li class="nav-list-item">About</li>
+      <li class="nav-list-item">Topic</li>
+    </ul>
+
+  </nav>
+  <!-- ブロック要素 > インライン要素 正しい例 -->
+  <!--<div>-->
+  <!--  <a href="index.html">正しい例</a>-->
+  <!--</div>-->
+  <!-- インライン要素 > ブロック要素 間違った例 -->
+  <!--<a href="index.html">-->
+  <!--  <p>間違った例</p>-->
+  <!--</a>-->
+
+  <!-- main-visual用のdiv -->
+  <div class="main-visual">
+    <div class="main-visual-content">
+      <!-- pタグ（と文字）を追加 -->
+      <p class="main-visual-text">
+        The world is a book<br />
+        and those who do not travel<br />
+        read only one page.
+      </p>
+      <p class="main-visual-name">
+        St.Augustinc
+      </p>
+    </div>
+  </div>
+
+  <!-- main用のdiv -->
+  <!--<div class = "main">-->
+  <!--  <div class = "blog"></div>-->
+  <!--  <div class = "sidebar"></div>-->
+  <!--</div>-->
+  <main>
+    <section class="blog">
+      <h2 class="blog-heading">Recent Blogs</h2>
+
+      <div class="blog-box">
+        <!--forest-->
+        <div class="blog-item">
+          <!-- 自分の回答
+              <img class="blog-image"　src="img/forest.jpg" width ="180px" height="180px"> -->
+          <img class="blog-image" src="img/forest.jpg">
+          <section class="blog-text">
+            <h3 class="blog-textwi-heading">
+              <a href="single.html">
+                hopeful lesson from<br>
+                the battle to save<br>
+                rainforests
+              </a>
+            </h3>
+            <p class="blog-date">June 19, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+        <!--desert-->
+        <div class="blog-item">
+          <img class="blog-image" src="img/desert.jpg">
+          <section class="blog-text">
+            <h3 class="blog-text-heading">
+              <a href="single.html">
+                How to fight<br>
+                desertification and<br>
+                reverse climate change
+              </a>
+            </h3>
+            <p class="blog-date">June 17, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+        <!--sunset-->
+        <div class="blog-item">
+          <img class="blog-image" src="img/sunset.jpg">
+          <section class="blog-text">
+            <h3 class="blog-text-heading">
+              <a href="single.html">
+                Why I'm rowing<br>
+                across the Pacific
+              </a>
+            </h3>
+            <p class="blog-date">June 16, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+        <!--italy-->
+        <div class="blog-item">
+          <img class="blog-image" src="img/italy.jpg">
+          <section class="blog-text">
+            <h3 class="blog-text-heading">
+              <a href="single.html">
+                Unseen footage,<br>
+                untamed nature
+              </a>
+            </h3>
+            <p class="blog-date">June 15, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+        <!--italy-->
+        <div class="blog-item">
+          <img class="blog-image" src="img/asia.jpg">
+          <section class="blog-text">
+            <h3 class="blog-text-heading">
+              <a href="single.html">
+                The case for<br>
+                engineering our food
+              </a>
+            </h3>
+            <p class="blog-date">June 14, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+      </div>
+      <div class="pagination">
+        <p><<</p>
+        <p><</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>></p>
+        <p>>></p>
+      </div>
+    </section>
+    <div class="sidebar">
+      <section class="popular">
+        <h2 class="popular-heading common-heading">Popular</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">To solve old problems,<br>study new species</p>
+          <p class="popular-text">Why Earth may someday<br>look like Mars</p>
+          <p class="popular-text">What will humans look<br>like in 100 years?</p>
+          <p class="popular-text">How to grow a forest<br>in your backyard</p>
+          <p class="popular-text">How humans could evolve<br>to survive in space</p>
+        </div>
+      </section>
+      <section class="instagram">
+        <h2 class="instagram-heading common-heading">Instagram</h2>
+        <div class="sidebar-contents">
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+          <div class="instagram-box"></div>
+        </div>
+      </section>
+      <section class="categories">
+        <h2 class="categories-heading common-heading">Categories</h2>
+        <div class="sidebar-contents">
+          <p class="categories-text">Technology(15)</p>
+          <p class="categories-text">Business(23)</p>
+          <p class="categories-text">Entertainment(12)</p>
+          <p class="categories-text">Nature(32)</p>
+          <p class="categories-text">Education(9)</p>
+          <p class="categories-text">Adventure(23)</p>
+          <p class="categories-text">Communication(14)</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer>
+    <p class="footer-text">All rights reserved by Infratop.Inc.</p>
+  </footer>
+
+</body>
+
+</html>

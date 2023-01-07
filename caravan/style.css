@@ -1,0 +1,571 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+
+/*
+   リセットCSS
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 要素の横幅や高さが意図したとおりに指定*/
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+
+a {
+  /*＜a＞タグの文字装飾機能による指定を「なし」*/
+  text-align: none;
+}
+
+header,nav,h2,.main-visual,footer {
+  font-family: Chalkduster, "Bradley hand", Courier, "Segoe Print", sans-serif;
+}
+
+header {
+
+  /* 横幅 90% */
+  width: 90%;
+  /* 内側余白 上下 15px* 左右 0px　*/
+  padding: 15px 0;
+  /* 中央寄せ（左右に余白がないとできない） */
+  margin: 0 auto;
+  /*　text-alignプロパティは、文字や画像に対して、水平方向の揃え方を指定するプロパティ */
+  /*  テキストを中央揃え*/
+  text-align: center;
+
+  /* #socialの基準位置を相対位置へ変更する */
+  position: relative;
+}
+
+.social {
+  /* headerの左上を基準に絶対位置で指定する */
+  position: absolute;
+  /* headerの左上から22px下側へ移動する */
+  top:22px;
+   /* headerの右上から22px左側へ移動する */
+  right: 22px;
+
+}
+
+/* すべての画面サイズで適用される設定 */
+.social i {
+  display: inline-block;
+  margin-left: 20px;
+  /*color: black;*/
+}
+
+/* タブレット横置きサイズ（1024px）以下の際に適用される設定 */
+/*@media screen and (max-width:1024px) {*/
+
+/*  .social i {*/
+/*    color: green;*/
+/*  }*/
+
+/*}*/
+
+/* タブレット縦置きサイズ（768px）以下の際に適用される設定 */
+/*@media screen and (max-width:768px) {*/
+
+/*  .social i {*/
+/*    color: red;*/
+/*  }*/
+/*}*/
+
+/* スマートフォンサイズ（425px）以下の際に適用される設定 */
+/*@media screen and (max-width:425px) {*/
+
+  /*.social i {*/
+  /*  color: blue;*/
+  /*}*/
+/*}*/
+
+header.heading {
+
+  /*
+  headerタグ内のheadingクラスにのみ反映される
+  */
+
+  /*headingクラスのフォントサイズ 32px*/
+  font-size: 32px;
+
+}
+
+/* ページ内すべてのh1要素に適応される */
+/*h1 {*/
+/*   font-size: 32px;*/
+/*} */
+
+/* headerクラス内にあるh1要素に対してのみ適応される */
+
+/*.header h1 {*/
+/*    font-size: 32px;*/
+/*}*/
+
+/*h1, h2 {*/
+  /* h1要素とh2要素の両方に適用される */
+/*}*/
+/*header>h1 {*/
+  /* header要素の直下にあるh1要素に適用される */
+/*}*/
+/*h1#header {*/
+  /* id名「header」のh1要素に適用される */
+/*}*/
+
+
+.nav-list {
+
+  /* テキストを中央揃え */
+  text-align: center;
+  /* 内側余白 上下 15px* 左右 0px　*/
+  padding: 10px 0;
+  /* 中央寄せ（左右に余白がないとできない） */
+  margin: 0 auto;
+}
+
+.nav-list-item {
+  /* リスト先頭にマークを入れない */
+  list-style: none;
+
+  /*・block⇒要素が横までいっぱいに広がり、縦に並んでいく*/
+  /*・inline⇒要素が平ぺったく横に並んでいく*/
+  /*・inline-block⇒blockとinlineの中間*/
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.main-visual {
+
+  /* 横幅いっぱい */
+  width: 100%;
+  /* 高さ 300px */
+  height: 300px;
+  /* 背景に画像を指定するプロパティ 画像のURL */
+  background-image: url(img/mv.jpg);
+  /* 縦横比を維持したまま背景領域を埋め尽くす */
+  background-size: cover;
+  /* 背景画像を中央位置に配置 */
+  background-position: center;
+}
+
+/*１．背景画像のサイズを変更するには、background-sizeプロパティを使います。*/
+/*background-sizeは、background-imageとセットで使われることが多いです。*/
+/*下記のように指定します。*/
+
+/*セレクタ {*/
+/*  background-size: 値;*/
+/*  background-size: 画像の幅 画像の高さ;*/
+/*}*/
+/*この2パターンの使用例は、下記のとおりです。*/
+
+/*セレクタ {*/
+  /* 元画像のサイズを維持したまま、自動的に表示される 初期値 */
+/*  background-size: auto;*/
+
+  /* 画像の縦横比を維持したまま、領域全体を埋め尽くすまで伸縮される（画像全体が表示される） */
+/*  background-size: contain;*/
+
+  /* 画像の縦横比を維持したまま、領域全体をおおうサイズで伸縮される（画像の表示されない部分も発生） */
+/*  background-size: cover;*/
+
+  /* 表示領域の幅100％ 高さ100％で表示（縦横比は無視） */
+/*  background-size: 100% 100%;*/
+
+  /* pxを指定して表示 */
+/*  background-size: 24px auto;*/
+/*}*/
+
+/*２．background-positionは、背景画像の位置を調整するプロパティです。*/
+/*background-positionは、background-imageを設定した際に使用するものなので、背景画像を設定していない要素に記述しても意味がありません。*/
+/*下記のように、値を１つまたは２つ指定して使用します。*/
+
+/*sample.css*/
+/*セレクタ {*/
+/*  background-position: 値;*/
+/*  background-position: 値 値;*/
+/*}*/
+/*background-positionには、以下のような値があります。*/
+
+/*top （上に配置）*/
+/*right （右に配置）*/
+/*bottom （下に配置）*/
+/*left （左に配置）*/
+/*center （中央に配置）*/
+/*上記にある値を組み合わせて記述する場合が多いですが、もちろん、pxやem、％を使って細かい指定も可能です。*/
+/*それぞれ指定したときの違いを確認しましょう。*/
+
+/*sample.css*/
+/*セレクタ {*/
+  /* 上揃え、左右を中央に配置 */
+/*  background-position: top center;*/
+/*}*/
+/*セレクタ {*/
+  /* 左から50px、上から100pxの位置に配置 */
+/*  background-position: 50px 100px;*/
+/*}*/
+
+
+.main-visual-content {
+
+  /* 横幅 350px */
+  /*width: 350px;*/
+
+  /* 横幅 40% */
+  width: 40%;
+  /* 高さ 300px */
+  height: 300px;
+  /* 背景色を半透明の黒にする */
+  background-color: rgba(0,0,0,0.5);
+  /* 背景色を半透明の白にする */
+  /*background-color: rgba(255,255,255,0.5);*/
+
+  /*　文字を中央ぞろいにする　*/
+  text-align: center;
+  /* 上側の内側余白で垂直方向の位置を調整 */
+  padding-top: 105px;
+
+}
+
+.main-visual-text {
+
+  color: #fff;
+}
+
+.main-visual-name {
+  margin-top: 30px;
+  color: #fff;
+}
+
+/*.main {*/
+
+  /*
+  　親要素
+  */
+
+  /* 横幅 840px */
+/*  width: 840px;*/
+  /* Flexboxの利用 */
+/*  display: flex;*/
+  /* 子要素の横並び・中央寄せ */
+/*  justify-content: center;*/
+  /* 中央寄せ（左右に余白がないとできない） */
+/*  margin: 0 auto;*/
+
+/*}*/
+
+
+/*main要素*/
+/*index.html内に追加したmain要素は、ページ内の中心的なコンテンツを表すときに使います。*/
+/*中心的なコンテンツを表す要素なので、header要素やfooter要素、nav要素などの子要素にはできません。*/
+/*main要素内には、Webページのメインコンテンツにしたい要素すべてを収めるようにしましょう。*/
+
+/*line-heightプロパティ*/
+/*style.cssに追加したline-heightは、行の高さを設定するプロパティです。*/
+/*単位を付けずに指定すると、行内で使用するフォントサイズを1とした倍率で、行の高さが設定されます。*/
+
+/*h2 {*/
+  /* 文字の行の高さは40pxになる */
+/*  line-height: 40px; */
+  /* h2のフォントサイズが10pxの場合、行の高さは1.5倍（15px）になる */
+/*  line-height: 1.5; */
+/*}*/
+
+main {
+
+  /* 横幅800px */
+  width: 800px;
+  /* Flexboxの利用 */
+  display: flex;
+   /* 要素の横並び・中央寄せ */
+  justify-content: center;
+  /* 要素の中央揃え */
+  margin: 0 auto;
+  /* 上下に70px、左右に0pxの内側余白 */
+  padding: 70px 0;
+}
+
+.blog {
+
+  /* 横幅 600px */
+  /*width: 600px;*/
+  /* 高さ 600px */
+  /*height: 600px;*/
+
+  width: 540px;
+  /* 領域の右側余白 */
+  margin-right: 30px;
+
+}
+
+.blog-box {
+  padding-top: 50px;
+}
+
+.blog-heading {
+
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+
+}
+
+.blog-image {
+  height: 180px;
+}
+
+.blog-text {
+  /*自分の回答*/
+  /*padding-top: 25px;*/
+  /*padding-left: 30px;*/
+  padding: 25px 0 0 30px;
+}
+
+.blog-text-heading {
+
+  padding-bottom: 15px;
+}
+
+
+.blog-item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.blog-date {
+  font-size: 12px;
+  display: inline-block;
+}
+
+
+/*border-radiusプロパティ*/
+/*border-radiusは、領域の四辺の角を丸くしたいときに使うプロパティです。*/
+/*角の半径を、pxや%などの単位を付けて指定します。50%を指定すると、正円になります。*/
+
+/*.sample {*/
+  /* 要素の形を正円にする */
+/*  border-radius: 50%;*/
+  /* 少しだけ角を丸める */
+/*  border-radius: 3px;*/
+/*}*/
+
+
+.category {
+  display: inline-block;
+  padding: 5px 8px;
+  background-color: #acabab;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+
+}
+
+.pagination {
+
+  text-align: center;
+  padding-top: 50px;
+}
+
+.pagination p {
+
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0.5px;
+  color: #fff;
+  background-color: #acabab;
+  border-radius: 3px;
+  line-height: 30px;
+}
+
+.sidebar {
+
+  /* 横幅 240px */
+  /*width: 240px;*/
+  /* 高さ 600px */
+  /*height: 600px;*/
+
+  width: 230px;
+
+}
+
+.common-heading {
+  /* 下線　太さ8px　色付き */
+  border-bottom: 8px solid #f7f7f7;
+  /* 文字　中央寄せ */
+  text-align: center;
+  /* 文字の高さ */
+  line-height: 0.8;
+}
+
+.sidebar-contents {
+
+  padding: 50px 0;
+}
+
+.popular-text,
+.categories-text {
+
+  /* 内側余白 5px */
+  padding-bottom: 5px;
+  /* 下線　太さ1px　色付き */
+  border-bottom: 1px solid #f7f7f7;
+   /* 領域の下側余白　5px */
+  margin-bottom: 5px;
+}
+
+.popular-text:last-child,
+.categories-text:last-child {
+
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.instagram .sidebar-contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.instagram-box {
+  width: 110px;
+  padding-top: 110px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.instagram-box:nth-child(odd) {
+  margin: 0 10px 10px 0;
+}
+
+.instagram-box:nth-child(1) {
+  background-image: url(img/airport.jpg);
+}
+
+.instagram-box:nth-child(2) {
+  background-image: url(img/japan.jpg);
+}
+
+.instagram-box:nth-child(3) {
+  background-image: url(img/snow.jpg);
+}
+
+.instagram-box:nth-child(4) {
+  background-image: url(img/japan2.jpg);
+}
+
+.instagram-box:nth-child(5) {
+  background-image: url(img/lake.jpg);
+}
+
+.instagram-box:nth-child(6) {
+  background-image: url(img/road.jpg);
+}
+
+
+/*.popular-text:last-child, .categories-text:last-child {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  border: none;*/
+/*}*/
+/*:last-child という記述が出てきましたね。これを「疑似クラス」と呼びます。*/
+/*疑似クラスは、要素が特定の状態になった場合にのみ適用されるCSSです。*/
+
+/*今回の場合は、「popular-textとcategories-textの中で、最後に記述された要素のみに適用する」という意味です。*/
+
+
+footer {
+
+  /* 横幅いっぱい */
+  width: 100%;
+  /* 高さ 120px */
+  height: 120px;
+  /* 文字　中央寄せ */
+  text-align: center;
+  /* 1行の高さ　120px */
+  line-height: 120px;
+  /* 背景色 */
+  background-color: #848282;
+
+}
+
+.footer-text {
+  /* 文字の色 */
+  color: #fff;
+
+}
+
+/* スマートフォンサイズ（425px）以下の際に適用される設定 */
+@media screen and (max-width: 425px) {
+
+    header {
+      width: 100%;
+    }
+
+    .social {
+      /*　消える　*/
+      display: none;
+    }
+
+    .nav-list {
+      width: 100%;
+    }
+
+    .nav-list-item {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+
+    main {
+      width: 100%;
+    }
+
+    .main-visual-content {
+      width: 100%;
+    }
+
+    .blog {
+      width: 100%;
+      margin: 0;
+    }
+
+    .blog-box {
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    .blog-image {
+      width:49%;
+    }
+
+    .blog-text {
+      width:49%;
+      padding-top: 5px;
+    }
+
+    .sidebar {
+      width: 100%;
+    }
+
+    .sidebar-contents {
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+
+    .instagram-box {
+
+      width: 48%;
+      padding-top: 48%;
+    }
+
+    .instagram-box:nth-child(odd) {
+      margin-right: 4px;
+    }
+
+    .pagination {
+      margin-bottom: 50px;
+    }
+}
+

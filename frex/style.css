@@ -1,0 +1,84 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+
+/*
+   リセットCSS
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 要素の横幅や高さが意図したとおりに指定*/
+  box-sizing: border-box;
+}
+
+.flex1 {
+
+  display: flex;
+  background-color: #00c7ce;
+
+}
+
+.flex1 > div {
+
+  width: 33%;
+  height: 300px;
+  margin: 10px;
+  background-color: #fff
+}
+
+.button {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 100px;
+  padding: 10px;
+  color: #fff;
+  background-color: #00c7ce;
+
+}
+
+.flex {
+
+  background-color: #00c7ce;
+  height: 50vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.flex > div {
+
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+
+}
+
+.flex3 {
+
+  background-color: #00c7ce;
+  height: 50vh;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #00c7ce;
+}
+
+.flex3 > div {
+
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+
+}
+
+.flex3 > :first-child {
+  margin-right:auto;
+}
+
+main {
+  
+}
